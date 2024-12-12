@@ -50,4 +50,4 @@ Se preferir usar o application.yml
 
 Se você precisar de configurações avançadas, pode criar uma classe de configuração personalizada, mas isso é opcional.
 
-Segue o link da documentação do mesmo: (https://www.baeldung.com/hikaricp)
+Segue o link da documentação: (https://www.baeldung.com/hikaricp)
