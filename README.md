@@ -20,13 +20,17 @@ Configure seu application.properties para esse exemplo
     spring.datasource.password=sua_senha
     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
     
-    # Configurações específicas do HikariCP
+    # Configurações específicas do HikariCP 
+
+    logging.level.com.zaxxer.hikari=DEBUG
+    logging.level.org.springframework.boot.autoconfigure.jdbc=DEBUG -- log do hirakiCP
+    
+    spring.datasource.hikari.poolName=SpringBootJPAHikariCP
     spring.datasource.hikari.maximum-pool-size=10
     spring.datasource.hikari.minimum-idle=5
-    spring.datasource.hikari.idle-timeout=300000
-    spring.datasource.hikari.max-lifetime=900000
-    spring.datasource.hikari.connection-timeout=20000
-    spring.datasource.hikari.pool-name=MeuPool
+    spring.datasource.hikari.idle-timeout=600000
+    spring.datasource.hikari.max-lifetime=1800000
+    spring.datasource.hikari.connection-timeout=30000
 
 Se preferir usar o application.yml
 
@@ -42,6 +46,6 @@ Se preferir usar o application.yml
           idle-timeout: 300000
           max-lifetime: 900000
           connection-timeout: 20000
-          pool-name: MeuPool
+          pool-name: SpringBootJPAHikariCP
 
 Se você precisar de configurações avançadas, pode criar uma classe de configuração personalizada, mas isso é opcional.
